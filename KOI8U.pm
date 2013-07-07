@@ -29,7 +29,7 @@ BEGIN {
 # (and so on)
 
 BEGIN { eval q{ use vars qw($VERSION) } }
-$VERSION = sprintf '%d.%02d', q$Revision: 0.90 $ =~ /(\d+)/oxmsg;
+$VERSION = sprintf '%d.%02d', q$Revision: 0.91 $ =~ /(\d+)/oxmsg;
 
 BEGIN { CORE::require Ekoi8u; }
 
@@ -489,7 +489,7 @@ sub KOI8U::escape_script {
         # in Chapter 5: Pattern Matching
         # of ISBN 978-0-596-00492-7 Programming Perl 4th Edition.
 
-        $e_script .= sprintf("use Ekoi8u %s;\n", $KOI8U::VERSION); # require run-time routines version
+        $e_script .= sprintf("use Ekoi8u %s.0;\n", $KOI8U::VERSION); # require run-time routines version
 
         # use KOI8U version qw(ord reverse getc);
         $function_ord     = 'ord';
@@ -5411,12 +5411,6 @@ KOI8U.pm removes 'bytes::' at head of function name.
   bytes::substr    substr    Byte
   ---------------------------------------
 
-=head1 Escaping Built-in Standard Module (Ekoi8u.pm provides)
-
-Ekoi8u.pm does "BEGIN { unshift @INC, '/Perl/site/lib/KOI8U' }" at head.
-Store the standard module modified for KOI8U software in this directory to
-override built-in standard modules.
-
 =head1 Escaping Standard Module Content (You do)
 
 You need copy built-in standard module to /Perl/site/lib/KOI8U and change
@@ -6052,3 +6046,4 @@ I am thankful to all persons.
 
 =cut
 
+# Did you fun enough? ^o^)
