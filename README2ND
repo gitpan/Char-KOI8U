@@ -1,14 +1,12 @@
 NAME
 
-       Char::KOI8U - Source code filter for KOI8-U script (Imitation JPerl)
+       KOI8U - Source code filter for KOI8-U script (Imitation JPerl)
 
 SYNOPSIS
 
     In your script:
 
-      use Char::KOI8U; # CPAN formal style
-         or
-      use KOI8U; # casual style
+      use KOI8U;
 
     At command prompt:
 
