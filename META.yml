@@ -1,7 +1,7 @@
 --- #YAML:1.0
 name: Char-KOI8U
 abstract: Source code filter for KOI8-U script (Imitation JPerl)
-version: 0.99
+version: 1.00
 author:
   - INABA Hitoshi <ina@cpan.org>
 license: perl
